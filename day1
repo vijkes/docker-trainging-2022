@@ -1,0 +1,95 @@
+  600 vim docker-ce.repo 
+
+[docker]
+baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
+gpgcheck=0
+
+
+  601  ifconfig
+  602  systemctl status httpd
+
+  614  cd yum.repos.d/
+  615  ll
+
+  625  sudo -H gedit /etc/yum.repos.d/dvd.repo &>/dev/null
+  626  yum repolist
+  
+  639  cd /etc/yum.repos.d/
+ 
+  647  yum repolist
+  648    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+ 
+ 
+  750  watch -n 1 free -m
+  751  docker images
+ 
+  758  docker start hungry_mahavira
+ 
+  762  docker attach hungry_mahavira
+ 
+  768  docker run --name keshav ubuntu:22.04
+ 
+  771  docker start keshav
+ 
+  773  docker attach keshav
+  
+ 
+  789  docker stop vk
+ 
+  793  docker inspect loving_lumiere
+  794  which date
+  795  cat /usr/bin/date
+  796  rpm -q -f /usr/bin/date
+ 
+  804  docker run -it centos:7
+ 
+  861  docker swarm --help
+  862  docker container --help
+ 
+  864  docker image --help
+  865  docker container ls
+  866  docker container ls -a
+  
+  878  docker container ls -a -q
+  879  docker container rm -f $(docker container ls -a -q)
+
+  890  docker image run -it --name os4 centos:7
+  891  docker container run -it --name os4 centos:7
+ 
+
+  
+  921  firefox &
+  922  wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.0-1.2.beta.2.el7.x86_64.rpm
+  
+  932  docker login
+  
+  934  docker push vijkes/os5:v1
+  
+  940  docker run -it vijkes/my31augos2:v2 ifconfig
+  941  docker container ps
+  942  docker container ps -a
+  
+ 
+  994  docker network
+  995  docker network connect
+  996  docker network disconnect
+  997  systemctl status docker
+
+ 1007  cd /var/log/httpd/
+ 
+
+ 
+ 1017  netstat -tnlp
+ 1018  cd /var/www/html/
+ 
+ 1020  cat index.html 
+ 
+ 1029   curl 172.17.0.4
+ 1030  systemctl status httpd
+ 1031  ps -aux | grep httpd
+
+ 1035  cat httpd.pid 
+
+ 
+ 1069  scp docker.repo root@192.168.1.37:/etc/yum.repos.d/
+ 
