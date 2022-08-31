@@ -4,6 +4,13 @@
 baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
 gpgcheck=0
 
+12  yum install docker-ce
+13  yum install docker-ce --nobest
+29  curl -sSL htttps://get.docker.com | sh
+204  docker container inspect --format "{{.NetworkSettings.IPAddress}}" 31augos
+209  docker container inspect --format "{{.NetworkSettings.MacAddress}}" 31augos
+
+
 
   601  ifconfig
   602  systemctl status httpd
