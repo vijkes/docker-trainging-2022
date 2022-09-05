@@ -84,16 +84,28 @@ gpgcheck=0
 
  1007  cd /var/log/httpd/
  
-
  
  1017  netstat -tnlp
  1018  cd /var/www/html/
+ 
+ 
+1008  /usr/sbin/httpd   [copy]
+1009  vi /root/.bashrc  [start on boot]
+1010  rm -f  /var/run/httpd/httpd.pid
+1011  rm -rf  /var/run/httpd/*
+
+
+
+ 1031  ps -aux | grep httpd
+ 1032 cd /var/run/httpd
+ 1033 cat httpd.pid
+ 
  
  1020  cat index.html 
  
  1029   curl 172.17.0.4
  1030  systemctl status httpd
- 1031  ps -aux | grep httpd
+ 
 
  1035  cat httpd.pid 
 
