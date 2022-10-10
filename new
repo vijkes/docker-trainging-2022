@@ -1,1 +1,30 @@
  docker run -it --name c5 -v /data:/var/www/html/persist  centos:7
+
+
+29  docker rm -f $(docker ps -aq)
+   30  docker ps -a
+   31 docker run -itd --name web httpd
+   32 docker inspect <ip>
+   32  ll -a
+   33  mkdir /code
+   34  cd /code
+   34  docker run -it --name webpage -p 1234:80 -v /code:/var/www/html centos:7
+   35  pwd
+   36  cat index.html
+   37  ll
+   38  cat > index.html
+  
+   45  docker run -it --name dbclient centos:7
+  
+   50  docker inspect newdb
+   51  ping 172.17.0.3
+   52  docker ps
+   53  docker attach dbclient
+
+   60  docker exec -it newdb bash
+   61  date
+   62  cal
+   63  cal \ 2 2022
+   64  cal 2 2022
+   70  docker run -dit --name datab -e MYSQL_ROOT_PASSWORD=yellow -e MYSQL_USER=vk -e MYSQL_PASSWORD=yellow -e MYSQL_DATABASE=vkstudent mysql
+   73  docker exec -it datab bash
