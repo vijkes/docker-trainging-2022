@@ -28,3 +28,14 @@
    64  cal 2 2022
    70  docker run -dit --name datab -e MYSQL_ROOT_PASSWORD=yellow -e MYSQL_USER=vk -e MYSQL_PASSWORD=yellow -e MYSQL_DATABASE=vkstudent mysql
    73  docker exec -it datab bash
+
+-----------------day3-------------------------------------------------
+
+   85  docker pull wordpress
+  103  docker run -idt --name db -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_DATABASE=mydb -e MYSQL_USER=vk -e MYSQL_PASSWORD=redhat mysql
+  104  docker run -idt --name mywps -p 8080:80 wordpress:latest
+  122  docker run -itd --name db -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_DATABASE=mydb -e MYSQL_USER=vk -e MYSQL_PASSWORD=redhat -v /newdata:/var/lib/mysql mysql
+  169  docker run -idt --name os1 centos:7
+  170  docker run -idt --name os2 --link os1 centos:7
+  171  docker attach os1
+  172  docker attach os2
