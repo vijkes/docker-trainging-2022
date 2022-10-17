@@ -39,3 +39,24 @@
   170  docker run -idt --name os2 --link os1 centos:7
   171  docker attach os1
   172  docker attach os2
+
+----------------day5-------------------------------------------------
+
+Network packet from the operating system goes to the router and it
+changes the source IP to the router’s public IP this changing of IP
+address is called nating or masquerade
+
+
+A software define network (SDN) is a tool or technology through
+which we can create a switch or router which works as a real
+physical hardware device
+
+Docker has created the entire network infrastructure with the help
+of software-defined networking
+
+As soon as we launch the container internally docker provides one
+network card to it 
+
+IPAM is a concept that is used for IP address management that
+helps in network assigning addresses which means any container
+docker launch it will be assigned with the IP address
