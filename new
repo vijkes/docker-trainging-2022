@@ -60,3 +60,12 @@ network card to it
 IPAM is a concept that is used for IP address management that
 helps in network assigning addresses which means any container
 docker launch it will be assigned with the IP address
+
+
+----------------day6-------------------------------------------------
+ 213  docker network create --driver bridge --subnet 10.0.1.0/24 dbnet
+ 237  docker run -dit --name c4 --network dbnet centos:7
+ 272  docker run -dit --name mywps --network dbnet -p 1234:80 wordpress
+ 282  docker run -dit --name mydb --network dbnet -e MYSQL_ROOT_PASSWORD=redhat \
+ -e MYSQL_DATABASE=db -e MYSQL_USER=vk \
+ -e MYSQL_PASSWORD=redhat -v /newdat:/var/lib/mysql mysql
