@@ -69,3 +69,46 @@ docker launch it will be assigned with the IP address
  282  docker run -dit --name mydb --network dbnet -e MYSQL_ROOT_PASSWORD=redhat \
  -e MYSQL_DATABASE=db -e MYSQL_USER=vk \
  -e MYSQL_PASSWORD=redhat -v /newdat:/var/lib/mysql mysql
+ 
+ 
+ ------------------------day7------------docker-compose----------------------------------
+    327  docker-compose
+  328   curl -SL https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+
+  330   docker compose version
+  331  chmod +x /usr/local/bin/docker-compose
+
+  333  docker-compose version
+  334  mkdir /dockercode
+  335  cd /dockercode
+  336  vim mycode.yaml
+  337  docker rm -f $(docker ps -qa)
+
+  346  docker-compose version
+  347  docker --help
+  352  docker-compose -f mycode.yaml up
+
+  359  docker-compose ps
+  360  docker-compose -f mycode.yaml ps
+
+  379  mv d1.tsxt docker-compose.yaml
+  380  docker-compose ps
+  381  docker-compose -f up
+  382  docker-compose -f docker-compose.yaml up
+
+
+  385  vim docker-compose.yaml
+  386  docker-compose -f docker-compose.yaml up
+
+  392  docker-compose up -d
+  402  docker-compose up
+  403  ping 8.8.8.8
+
+  407  docker-compose up -f
+  434  docker-compose logs c1
+
+  436  docker-compose -h
+  456  docker-compose exec c1 date
+  463  docker-compose stop
+  465  docker-compose rm
+  470  docker network ls
