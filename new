@@ -142,3 +142,30 @@ docker-compose down means shutdown and delete
 
 docker-compose is a tool that runs over docer engine
 and it is used in automation of docker platform and setup
+
+ ------------------------day9------------dockerfile----------------------------------
+ 
+ FROM centos:7
+
+RUN yum install httpd -y
+RUN httpd
+RUN echo "Welcome to my webpage" >> /var/www/index.html
+
+
+workspace in dockerfile is known as root folder
+
+and one of the RUN command should come in last
+
+Dockerfile:
+Buildtime: process of Build ----> own  Image from code
+run command at build time     RUN
+
+RunTime: process of Image ---> Container
+run command at build time  ---->   CMD / Entrypoint
+
+auto exit means os failed to start
+
+
+
+
+
