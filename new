@@ -112,3 +112,33 @@ docker launch it will be assigned with the IP address
   463  docker-compose stop
   465  docker-compose rm
   470  docker network ls
+
+ ------------------------day8------------docker-compose----------------------------------
+ 
+   27  docker network ls
+   28  docker network create vknet --driver bridge
+   41  mkdir /data
+   42  docker run -dit --name mydb1 --network vknet -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_DATABASE=myblog -e MYSQL_USER=vkuser -e MYSQL_PASSWORD=redhat -v /data:/var/lib/mysql mysql:latest
+
+  
+   47  docker network rm vknet
+   52  docker-compose up  
+   66  docker-compose up -d
+   71  docker network inspect mycode_lwnet
+   80  docker-compose up -d
+   87  curl ifconfig.io
+  
+  139  docker-compose logs db
+  140  docker-compose logs wp
+  
+  170  no ps
+  174  docker-compose stop
+  176  docker-compose down
+ 
+ 
+ docker compose has given facility of depends on, not docker
+docker-compose stop  means stop
+docker-compose down means shutdown and delete
+
+docker-compose is a tool that runs over docer engine
+and it is used in automation of docker platform and setup
