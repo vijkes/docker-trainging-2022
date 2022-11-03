@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  db2:
+    image: mysql:latest
+    container_name: mydb2
+    networks:
+      - mknet
+    volumes:
+      - /data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=redhat
+      - MYSQL_USER=mk
+      - MYSQL_PASSWORD=redhat
+      - MYSQL_DATABASE=blogdb2
+
+  wp2:
+    image: wordpress:latest
+    container_name: mywp2
+    networks:
+      - mknet
+    ports:
+      - 8081:80
+    environment:
+      - WORDPRESS_DB_HOST=mydb2
+      - WORDPRESS_DB_USER=mk
+      - WORDPRESS_DB_PASSWORD=redhat
+      - WORDPRESS_DB_NAME=blogdb2
+
+networks:
+  mknet:
+    driver: bridge
