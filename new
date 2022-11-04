@@ -161,7 +161,7 @@ Buildtime: process of Build ----> own  Image from code
 run command at build time     RUN
 
 RunTime: process of Image ---> Container
-run command at build time  ---->   CMD / Entrypoint
+run command at run time  ---->   CMD / Entrypoint
 
 auto exit means os failed to start
 
