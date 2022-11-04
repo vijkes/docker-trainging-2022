@@ -165,6 +165,18 @@ run command at run time  ---->   CMD / Entrypoint
 
 auto exit means os failed to start
 
+RUN httpd    we can't copy data from RAM, and there is no use of this command
+CMD httpd    this works on run time
+
+
+docker build -t myos:v3 /code
+docker run -dit  --name os4 myos:v3
+docker history decode:v1
+ docker run -it decode:v1 cal
+docker run -it decode:v1 bash
+ docker save --help
+ docker save decode:v3 -o myweb.tar
+docker load -i myweb.tar
 
 
 
