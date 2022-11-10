@@ -178,6 +178,25 @@ docker run -it decode:v1 bash
  docker save decode:v3 -o myweb.tar
 docker load -i myweb.tar
 
+====================================================================================================================================
+
+in CMD we can overwrite command in docker run
+but in ENTRYPOINT we can't overwrite
+
+in CMD we can't chage argument
+in ENTRYPOINT we can dynamacilly change argumetn
+
+
+  705  docker run -it --name newos3 centos:7 cp my.py newos1:/tmp
+  721  docker build -t py:v1 .
+  760  docker run -it py:v1 /mypycode/hello.py
+  770  docker run -it py:v1 cal
+ 783  docker run -it py:v1 2022
+  784  docker run -it py:v1 13 2022
+  807  docker run -it py:v1 /mypycode/hello.py
+  838  docker info | grep index
+  839  docker pull vijkes/javaweb:jenkins-endtoendpipelinejob-192
+
 
 
 
