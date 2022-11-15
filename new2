@@ -1,0 +1,9 @@
+========================================================================session 13============================================================
+
+Docker behind the scene lauch the process in that we can lauch multiple proccesses that is the reason why docker is fast
+
+whenever we launch container in iteractive mode docker gives terminal bcz behind scene it is running bash shell
+
+in container , root dir is linked with / drive and data in / drive comes from image, not from base sys
+
+data in /drive comes from image, that is reason if a container is running and we try to remove container, it gives error
