@@ -7,3 +7,18 @@ whenever we launch container in iteractive mode docker gives terminal bcz behind
 in container , root dir is linked with / drive and data in / drive comes from image, not from base sys
 
 data in /drive comes from image, that is reason if a container is running and we try to remove container, it gives error
+
+========================================session14=================================================================================
+folder is also called workspace
+
+image name in docker-compose build = workspace + service
+
+docker run -p
+docker-compose ports
+
+
+Difference b/w COPY and ADD
+
+COPY: can copy only file and tar file (source and destination model)
+
+ADD: can copy link and extract .tar file (source can we internet links also)
