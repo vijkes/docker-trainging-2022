@@ -22,3 +22,27 @@ Difference b/w COPY and ADD
 COPY: can copy only file and tar file (source and destination model)
 
 ADD: can copy link and extract .tar file (source can we internet links also)
+
+
+923  docker inspect  tdir-webapps-1
+  
+  927  docker build -t newtom:v1 .
+  928  docker run -itd newtom:v1
+ 
+  930  docker inspect f9a329ca304f
+ 
+  937  docker-compose up -d
+  
+  948  docker-compose down
+ 
+
+ 1094  tar -cf newweb.tar /sitedir
+
+ 1218  docker exec -it ce50da688916 /bash
+
+ 1252  docker run -dit -p 8083:80 new:v3
+
+ 1256  curl 172.17.0.12:8083
+ 
+ 1276  docker run -itd -P new:v4
+ 1277  docker history new:v4
