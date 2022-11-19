@@ -8,6 +8,28 @@ in container , root dir is linked with / drive and data in / drive comes from im
 
 data in /drive comes from image, that is reason if a container is running and we try to remove container, it gives error
 
+
+
+=======================================================================================================================================
+
+docker behind the scene uses
+nsenter -t 2340 -n 
+to launch a container
+
+container==process
+Namespace=isolated
+n/w user pstree
+shareable= h/w, cpu , ram, resources
+to restrict shareable resources we can use cgroup
+CGroup is provided by base OS
+
+CGroup is generally applied on top of process,
+but container is also process so, we can apply here also
+
+runc - Open Container Initiative runtime
+
+docer stop run, stop is done by runc
+
 ========================================session14=================================================================================
 folder is also called workspace
 
