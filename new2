@@ -13,7 +13,7 @@ data in /drive comes from image, that is reason if a container is running and we
 =======================================================================================================================================
 
 docker behind the scene uses
-nsenter -t 2340 -n 
+nsenter -t 2340 -n  == -it in docker
 to launch a container
 
 container==process
