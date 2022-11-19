@@ -30,6 +30,12 @@ runc - Open Container Initiative runtime
 
 docer stop run, stop is done by runc
 
+ 1014  docker run -it --memory 30M --name vkos centos:7   <min 6M>
+  1024  docker info | grep runc
+   1025  man runc
+    1026  runc --help
+     1027  runc list
+
 ========================================session14=================================================================================
 folder is also called workspace
 
