@@ -74,3 +74,36 @@ ADD: can copy link and extract .tar file (source can we internet links also)
  
  1276  docker run -itd -P new:v4
  1277  docker history new:v4
+ 
+ 
+ ========================================session14=================================================================================
+ cluster is know by master
+ 
+yum install docker -y && systemctl enable docker --now
+
+docker -h
+
+docker swarm -h
+
+docker swarm init -h
+
+docker swarm init --advertise-addr 172.31.47.13   <ip on master>
+
+docker node ls 		<works only on master>
+
+docker info | grep Swarm
+
+docker service ls
+
+docker service create --name webserver httpd
+
+docker service ps
+
+docker service ps webserver
+
+docker service create --name myserver nginx
+
+docker service myserver ls
+
+
+
