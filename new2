@@ -8,6 +8,16 @@ in container , root dir is linked with / drive and data in / drive comes from im
 
 data in /drive comes from image, that is reason if a container is running and we try to remove container, it gives error
 
+providing personal space to a process is callled namespace
+Network Namespace
+User Namespace
+Process namespace
+
+list namespace 
+lsns
+
+unshare: run program with some namespaces unshared from parent
+give any process personal pid
 
 
 =======================================================================================================================================
