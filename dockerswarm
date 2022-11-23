@@ -1,0 +1,66 @@
+
+   10  docker service ps myserver
+
+   12  docker swarm -h
+   13  docker swarm init -h
+
+   39  docker swarm join --advertise-addr 172.31.34.92
+
+   47  docker swarm join-token -q worker
+   48  docker swarm nodes
+   49  docker swarm nodes ls
+   50  docker nodes ls
+   51  systemctl status docker
+
+   56  docker service ps webserver
+  
+   65  docker service rm webserver
+ 
+   71  docker service create -h
+   72  docker service create --name mycontainer httpd
+   73  docker ps
+   74  docker service ps mycontainer
+   75  docker node ls
+   76  docker service create --name mycontainer2 nginx
+   77  docker service ps mycontainer2
+   78  docker service ps
+   79  docker service ls
+   80  docker service ps mycontainer2
+   81  docker service inspect mycontainer2
+
+   
+   97  docker service create -h
+   98  docker service create --name newweb --publish 8080:80 httpd
+  
+  104  docker node ls
+  105  docker node ps
+  106  docker service ls
+  107  docker service ps newweb
+  108  docker service -h
+  109  docker service ls
+  110  docker service create --name newweb2 --publish 8081:80 vimal13/apache-webserver-php 
+
+  
+  116  docker service ps newweb2
+  118  docker service scale -h
+  
+  123  docker service logs --details newweb2
+
+  127  docker service ls
+  129  docker service logs --details newweb2
+  131  docker service scale -h
+  132  docker service scale newweb2=5
+  133  docker service ls
+
+  136  docker service ps newweb2
+  138  docker service create --name myos centos:7
+
+  141  docker pull centos:7
+  142  docker service create --name myos centos:7
+ 
+  147  docker service logs myos
+  148  docker service create centos
+  149  docker service create --name myos2 ubuntu
+  150  docker service create --name myos22 ubuntu
+
+  155  docker service scale newweb2=10
