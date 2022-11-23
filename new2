@@ -34,11 +34,11 @@ to restrict shareable resources we can use cgroup
 CGroup is provided by base OS
 
 CGroup is generally applied on top of process,
-but container is also process so, we can apply here also
+but container is also process so, be can apply here also
 
 runc - Open Container Initiative runtime
 
-docer stop run, stop is done by runc
+docker stop, run, start is done by runc
 
  1014  docker run -it --memory 30M --name vkos centos:7   <min 6M>
   1024  docker info | grep runc
