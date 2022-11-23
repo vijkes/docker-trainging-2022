@@ -1,4 +1,23 @@
+Docker swarm	
 
+
+master/manager/slave
+slave/worker/node
+
+os: process
+docker:container
+swarm: task
+
+Loadbalancer in Swarm is called service	
+when we want to launch container , service will help
+
+get docker swarm token no.
+docker swarm join-token worker
+
+Replicas: 1/1 means
+current state/ desired state
+
+=============================================================================================================================================================
    10  docker service ps myserver
 
    12  docker swarm -h
