@@ -34,7 +34,7 @@ to restrict shareable resources we can use cgroup
 CGroup is provided by base OS
 
 CGroup is generally applied on top of process,
-but container is also process so, be can apply here also
+but container is also process so, we can apply here also
 
 runc - Open Container Initiative runtime
 
@@ -59,7 +59,7 @@ Difference b/w COPY and ADD
 
 COPY: can copy only file and tar file (source and destination model)
 
-ADD: can copy link and extract .tar file (source can we internet links also)
+ADD: can copy link and extract .tar file (source can be internet links also)
 
 
 923  docker inspect  tdir-webapps-1
