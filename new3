@@ -1,0 +1,39 @@
+
+======================================================29NOV=====================================================================================
+
+Raft consensus algorithm is protocol that docker master uses to share the info
+and this decides fault tolrance.
+ 
+
+Master node is to manage the thing,
+running the container is done by worker nodes
+
+State is generally decided by leader(first master)
+
+(N-1)/2
+here N is no. of master nodes.
+so we should have min. 3 master nodes.
+
+Leader means master is active
+Reacheable means it is passive master
+Brain is always used by leader node.
+
+we can convert master node to worker node and vice-versa this is called
+promotion or demotion
+
+
+don't give leader work of worker node, if it start using resources it might slow down.
+so we should cluster master only node. and not as a worker
+
+so we drain that node
+as a result in future all the running process stops in that node
+
+docker stack needs pre-build image unlike docker-compose.
+
+docker swarm join-token manager
+
+docker service update --replicas=5 mypyapp_web
+
+docker node  promote ip-172-31-34-92.us-east-2.compute.internal
+
+docker node update --availability drain ip-172-31-47-13.us-east-2.compute.internal
