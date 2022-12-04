@@ -1,0 +1,24 @@
+docker 
+ce: community edition (unstable)
+ee: enterprise edition (stable,more support)
+
+UCP: Universal Control Plane
+
+Deploy Kubernetes, Swarm, or both types
+ of clusters and manage them on a single MKE instance or centrally manage your instance
+ using Mirantis Container Cloud.
+ 
+ 
+ 1  yum install docker -y && systemctl enable docker --now
+   
+   12  docker run -it mirantis/ucp:3.6.1 install -h 
+  
+   23  docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:3.6.1 install --swarm-only --interactive --host-address 172.31.30.115 --force-minimums 
+  
+   35  docker service ps ucp-auth-api
+  
+   38  docker service inspect ucp-auth-api
+  
+   48  docker pull vijkes/javaweb:jenkins-endtoendpipelinejob-193
+
+Openshift is a tool that manage entire lifecycle of a product 
