@@ -1,0 +1,16 @@
+s for special file
+sock is kind of driver
+
+/usr/bin/dockerd
+
+/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=32768:65536
+
+chattr  is a security cmd that only root can run
+change file attributes on a Linux file system
+
+
+  docker pull docker:dind
+  docker run -it --privileged --name mydind docker:dind    <run docker inside docker>
+  docker run -it --cap-drop=NET_RAW --cap-drop=CHOWN --cap-add=SYS_TIME centos:7   <manage permission in docker>
+	  
+
