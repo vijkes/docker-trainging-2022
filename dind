@@ -8,6 +8,9 @@ sock is kind of driver
 chattr  is a security cmd that only root can run
 change file attributes on a Linux file system
 
+The Docker command always contacts to dockerd command ie is the reason  
+docker is a client-side program & dockerd is a server-side program
+
 
   docker pull docker:dind
   docker run -it --privileged --name mydind docker:dind    <run docker inside docker>
