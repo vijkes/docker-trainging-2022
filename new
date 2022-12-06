@@ -39,6 +39,10 @@
   170  docker run -idt --name os2 --link os1 centos:7
   171  docker attach os1
   172  docker attach os2
+  
+   docker run -dit --name DataBase -v /root/My_SQL:/var/lib/mysql  -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_DATABASE=DB -e MYSQL_USER=SHAKTIMAN -e MYSQL_PASSWORD=redhat mysql:latest
+   
+   docker run -dit --name Word_Press --link DataBase -p 1234:80 wordpress
 
 ----------------day5-------------------------------------------------
 
